@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+    <head>
+        <meta charset="utf-8">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>User</title>
+        <link rel="stylesheet" href="dist/css/app.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="an onymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="main">
+        <div class="mobile-menu md:hidden"">
+            <div class="mobile-menu-bar" style="background-color: rgb(45, 55, 72);" >
+                <a href class="homelink flex mr-auto text-white">PMO</a>
+                <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white  transform -rotate-90"></i> </a>
+            </div>
+            <ul class="mobile-menu-box py-5 hidden"  style="background-color: rgba(45, 55, 72, 0.1);" >
+                <li>
+                    <a href="./editprofile.html" class="menu">
+                        <div class="menu__icon"><i class="fa-solid fa-user" style="color: #fff;"></i></div>
+                        <div class="menu__title" style="color: #fff;">Profili düzəlt</div>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"><i
+                                class="fa-solid fa-signal"></i></div>
+                        <div class="menu__title"> Proyektlər<div
+                                class="menu__sub-icon "> <i
+                                    data-feather="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"><i
+                                        class="fa-solid fa-bars"></i></div>
+                                <div class="menu__title">Hamısı</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"><i
+                                        class="fa-solid fa-clock mr-1"></i></div>
+                                <div class="menu__title">Gözləmədə
+                                    olanlar</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"><i
+                                        class="fa-solid fa-circle-check mr-1"></i></div>
+                                <div class="menu__title">Bitənlər</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"  style="cursor: pointer;"><i
+                                        class="fa-solid fa-gears mr-1"></i></div>
+                                <div
+                                    class="menu__title">Hazırlananlar</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a class="menu" style="cursor: pointer;">
+                        <div class="menu__icon"><i
+                                class="fa-solid fa-arrow-right-from-bracket" style="color: #c9c9c9;"></i></div>
+                        <div class="logout menu__title" style="color: #c9c9c9;">Çıxış et</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex overflow-hidden">
+            <nav class="side-nav">
+                <a href class="intro-x flex items-center pl-5 pt-4 mt-3">
+                    <span class="homelink hidden xl:block text-white text-lg ml-3">PMO</span>
+                </a>
+                <div class="side-nav__devider my-6"></div>
+                <ul>
+                    <li>
+                        <a href="./editprofile.html" class="side-menu">
+                            <div class="side-menu__icon"><i
+                                    class="fa-solid fa-user" style="color: #fff;"></i></div>
+                            <div class="side-menu__title" style="color: #fff;">Profili düzəlt</div>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon"><i
+                                    class="fa-solid fa-signal"></i></div>
+                            <div class="side-menu__title"> Proyektlər<div
+                                    class="side-menu__sub-icon "> <i
+                                        data-feather="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-bars"></i></div>
+                                    <div class="side-menu__title">Hamısı</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-clock mr-1"></i></div>
+                                    <div class="side-menu__title">Gözləmədə
+                                        olanlar</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-circle-check mr-1"></i></div>
+                                    <div class="side-menu__title">Bitənlər</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-gears mr-1"></i></div>
+                                    <div
+                                        class="side-menu__title">Hazırlananlar</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li>
+                        <a class="side-menu" style="cursor: pointer;">
+                            <div class="side-menu__icon"><i
+                                    class="fa-solid fa-arrow-right-from-bracket" style="color: #c9c9c9;"></i></div>
+                            <div class="logout side-menu__title" style="color: #c9c9c9;">Çıxış et</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content ">
+                <div class="intro-y flex items-center mt-8">
+                    <h2 class="editprofilename text-lg font-medium mr-auto"></h2>
+                </div>
+                <div class="grid grid-cols-12 gap-6 mt-5 ">
+                    <div class="intro-y col-span-12 w-full ">
+                        <div class="intro-y box p-5">
+                            <form action>
+                                <div class=" grid grid-cols-2 gap-x-10">
+                                    <div class="mb-5">
+                                        <label for="crud-form-1"
+                                            class="form-label">Ad</label>
+                                        <input id="crud-form-1" type="text"
+                                            class="form-control w-full"
+                                            >
+                                    </div>
+                                    <div class="mb-5">
+                                        <label for="crud-form-3"
+                                            class="form-label">E-Poçt
+                                            adresi</label>
+                                        <input id="crud-form-3" type="email"
+                                            class="form-control w-full"
+                                            >
+                                    </div>
+                                    <div class="mb-5">
+                                        <label for="crud-form-4"
+                                            class="form-label">Yeni
+                                            Parol</label>
+                                        <input id="crud-form-4" type="password"
+                                            class="form-control w-full">
+                                    </div>
+                                </div>
+                                <div class="buttons">
+
+                                    <button type="submit"
+                                        class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-9 border-b-4 border-green-700 hover:border-green-500 rounded my-4">
+                                        Yadda Saxla
+                                    </button>
+                                    <a href="user.html" type="submit"
+                                        class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-9 border-b-4 border-gray-700 hover:border-gray-500 rounded my-4">
+                                        Ləğv et
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- END: Form Layout -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="module" src="./dist/js/editprofile.js"></script>
+        <script src="dist/js/app.js"></script>
+    </body>
+</html>

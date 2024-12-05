@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="./dist/images/logo.svg" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Add Project</title>
+        <link rel="stylesheet" href="./dist/css/app.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link href="https://cdn.jsdelivr.net/npm/tom-select@2.0.0/dist/css/tom-select.css" rel="stylesheet">
+    </head>
+    <body class="main">
+        <div class="mobile-menu md:hidden"">
+            <div class="mobile-menu-bar" style="background-color: rgb(45, 55, 72);" >
+                <a href class="homelink flex mr-auto text-white">PMO</a>
+                <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white  transform -rotate-90"></i> </a>
+            </div>
+            <ul class="mobile-menu-box py-5 hidden"  style="background-color: rgba(45, 55, 72, 0.1);" >
+                <li>
+                    <a href="./editprofile.html" class="menu">
+                        <div class="menu__icon"><i class="fa-solid fa-user" style="color: #fff;"></i></div>
+                        <div class="menu__title" style="color: #fff;">Profili düzəlt</div>
+                    </a>
+                </li>
+               <!--  <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"><i
+                                class="fa-solid fa-signal"></i></div>
+                        <div class="menu__title"> Proyektlər<div
+                                class="menu__sub-icon "> <i
+                                    data-feather="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"><i
+                                        class="fa-solid fa-bars"></i></div>
+                                <div class="menu__title">Hamısı</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"><i
+                                        class="fa-solid fa-clock mr-1"></i></div>
+                                <div class="menu__title">Gözləmədə
+                                    olanlar</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"><i
+                                        class="fa-solid fa-circle-check mr-1"></i></div>
+                                <div class="menu__title">Bitənlər</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="menu">
+                                <div class="menu__icon"  style="cursor: pointer;"><i
+                                        class="fa-solid fa-gears mr-1"></i></div>
+                                <div
+                                    class="menu__title">Hazırlananlar</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a class="menu" style="cursor: pointer;">
+                        <div class="menu__icon"><i
+                                class="fa-solid fa-arrow-right-from-bracket" style="color: #c9c9c9;"></i></div>
+                        <div class="logout menu__title" style="color: #c9c9c9;">Çıxış et</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex overflow-hidden">
+            <nav class="side-nav">
+                <a href class="intro-x flex items-center pl-5 pt-4 mt-3">
+                    <span class="homelink hidden xl:block text-white text-lg ml-3">PMO</span>
+                </a>
+                <div class="side-nav__devider my-6"></div>
+                <ul>
+                    <li>
+                        <a href="./editprofile.html" class="side-menu">
+                            <div class="side-menu__icon"><i
+                                    class="fa-solid fa-user" style="color: #fff;"></i></div>
+                            <div class="side-menu__title" style="color: #fff;">Profili düzəlt</div>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon"><i
+                                    class="fa-solid fa-signal"></i></div>
+                            <div class="side-menu__title"> Proyektlər<div
+                                    class="side-menu__sub-icon "> <i
+                                        data-feather="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-bars"></i></div>
+                                    <div class="side-menu__title">Hamısı</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-clock mr-1"></i></div>
+                                    <div class="side-menu__title">Gözləmədə
+                                        olanlar</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-circle-check mr-1"></i></div>
+                                    <div class="side-menu__title">Bitənlər</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href class="side-menu">
+                                    <div class="side-menu__icon"><i
+                                            class="fa-solid fa-gears mr-1"></i></div>
+                                    <div
+                                        class="side-menu__title">Hazırlananlar</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li>
+                        <a class="side-menu" style="cursor: pointer;">
+                            <div class="side-menu__icon"><i
+                                    class="fa-solid fa-arrow-right-from-bracket" style="color: #c9c9c9;"></i></div>
+                            <div class="logout side-menu__title" style="color: #c9c9c9;">Çıxış et</div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="formbox content p-10 ">
+                <form action class="flex flex-wrap">
+                    <div class="intro-y w-full">
+                        <label for="projectname"
+                            class="form-label font-bold">Proyektin
+                            adı</label>
+                        <input id="projectname" type="text"
+                            class="form-control mb-4">
+                    </div>
+                    <div class="intro-y w-full">
+                        <label for="description"
+                            class="form-label font-bold">Təsviri</label>
+                        <textarea class="form-control mb-4"
+                            style="resize: vertical; min-height: 150px;"
+                            id="description"></textarea>
+                    </div>
+                    <div class="intro-y w-full mb-10">
+                        <label for="users-select" class="form-label">Rəhbər əlavə edin</label>
+                        <select id="users-select"></select>                        
+                    </div>
+                    <div class="intro-y mb-10" style="width: 50%;">
+                        <label for="deadlinetime"
+                            class="form-label font-bold">Layihənin deadline vaxtı</label>
+                            <div class="relative mr-5 bg-white">
+                                <div
+                                    class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                                    <svg
+                                        class="w-4 h-4 text-gray-500"
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="black"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                    </svg>
+                                </div>
+                                <input id="datepicker-autohide" datepicker
+                                    datepicker-autohide type="text"
+                                    class="dead_line bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                                    placeholder="Tarixi seçin">
+                            </div>
+                    </div>
+                    <div class="intro-y mb-10 selectclass" style="width: 50%;">
+                        <label for="workers-select" class="form-label">İşçi əlavə edin</label>
+                        <select id="workers-select"></select>
+                    </div>
+                    <div class="intro-y w-full">
+                        <label for="status"
+                            class="block mb-2 text-sm font-bold">Statusu seçin</label>
+                        <select id="status"
+                            class="projectstatus bg-white-50 border border-white-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-white-700 border-white-600 placeholder-white-400 text-gray focus:ring-blue-500 focus:border-blue-500">
+                            <option value="done">Bitib</option>
+                            <option value="pending">Gözləmədədir</option>
+                            <option value="okay">Davam Edir</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="yadda-saxla"
+                        class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-9 border-b-4 border-green-700 hover:border-green-500 rounded my-4">
+                        Yadda Saxla
+                    </button>
+                    <a type="submit" href="./user.html"
+                        class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-9 border-b-4 border-gray-700 hover:border-gray-500 rounded my-4">
+                        Ləğv et
+                    </a>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tom-select@2.0.0/dist/js/tom-select.complete.min.js"></script>
+        <script type="module" src="dist/js/addproject.js"></script>
+        <script src="dist/js/app.js"></script>
+    </body>
+</html>

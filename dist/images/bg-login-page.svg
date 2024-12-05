@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6395" height="1079" viewBox="0 0 6395 1079">
+  <defs fill="#000000">
+    <clipPath id="clip-path" fill="#000000">
+      <rect id="Rectangle_73" data-name="Rectangle 73" width="6395" height="1079" transform="translate(-5391)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.747" y1="0.222" x2="0.973" y2="0.807" gradientUnits="objectBoundingBox" fill="#000000">
+      <stop offset="0" stop-color="#f0303b" fill="#000000"/>
+      <stop offset="1" stop-color="#a6141d" fill="#000000"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(5391)" clip-path="url(#clip-path)">
+    <g id="Group_118" data-name="Group 118" transform="translate(-419.333 -1.126)">
+      <path id="Path_142" data-name="Path 142" d="M6271.734-6.176s-222.478,187.809-55.349,583.254c44.957,106.375,81.514,205.964,84.521,277,8.164,192.764-156.046,268.564-156.046,268.564l-653.53-26.8L5475.065-21.625Z" transform="translate(-4876.383 0)" fill="#f1f5f8"/>
+      <path id="Union_6" data-name="Union 6" d="M-2631.1,1081.8v-1.6H-8230.9V.022H-2631.1V0H-1871.4s-187.845,197.448-91.626,488.844c49.167,148.9,96.309,256.289,104.683,362.118,7.979,100.852-57.98,201.711-168.644,254.286-65.858,31.29-144.552,42.382-223.028,42.383C-2441.2,1147.632-2631.1,1081.8-2631.1,1081.8Z" transform="translate(3259.524 0.803)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+<!-- Code injected by live-server -->
+<script fill="#000000">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>
