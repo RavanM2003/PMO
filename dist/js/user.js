@@ -1,5 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
-
+import { BASE_URL } from './baseurl.js';
 document.addEventListener("DOMContentLoaded", () => {
     const homelinks = document.querySelectorAll(".homelink");
 
