@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         const text = `
                             <summary class="bg-white question py-6 px-8 cursor-pointer select-none w-full outline-none">
                                 ${report.title}
+                                ${report.created_at.slice(0,10)}
                             </summary>
                             <p class="pt-1 pb-3 px-4 bg-red" style="background-color: #e3e3e3; color: black;">
                                 ${report.description}
-                                ${report.created_at}
                             </p>`;
 
                         details.innerHTML = text;
