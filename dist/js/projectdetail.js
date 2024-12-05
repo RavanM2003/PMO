@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             </summary>
                             <p class="pt-1 pb-3 px-4 bg-red" style="background-color: #e3e3e3; color: black;">
                                 ${report.description}
+                                ${report.created_at}
                             </p>`;
 
                         details.innerHTML = text;
