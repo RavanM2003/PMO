@@ -49,7 +49,7 @@ async function fetchProjects(page) {
             return;
         }
 
-        console.log('User token found:', JSON.parse(user).token); // Log user token for debugging
+        console.log('User token found:', JSON.parse(user).token); 
 
         const userprojects = await axios.get(`${API_BASE_URL}/api/projects/page/${count}?page=${page}`, {
             headers: {
@@ -57,7 +57,7 @@ async function fetchProjects(page) {
             }
         });
 
-        console.log('Projects data fetched:', userprojects.data); // Log fetched data
+        console.log('Projects data fetched:', userprojects.data);
 
         const tbody = document.querySelector(".tbody");
         if (!tbody) {
