@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
             if (user.user.user.role === "admin") {
-                window.location.href = "admin.html";
+                window.location.href = "https://pmo-c57.pages.dev/admin";
             } else if (user.user.user.role === "user") {
-                window.location.href = "user.html";
+                window.location.href = "https://pmo-c57.pages.dev/user";
             } else {
                 alert("Invalid role detected!");
             }
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!localStorage.getItem("user")) {
         localStorage.clear();
-        window.location.href = "http://127.0.0.1:5501/login.html";
+        window.location.href = "https://pmo-c57.pages.dev/login";
     } else {
         const user = localStorage.getItem('user');
         axios.defaults.headers.common['Authorization'] = `Bearer ${JSON.parse(user).token}`;
@@ -39,19 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     loader.style.display = "none";
                 } else {
                     if (role === "user") {
-                        window.location.href = "http://127.0.0.1:5501/user.html";
+                        window.location.href = "https://pmo-c57.pages.dev/user";
                     } else if (role === "super_admin") {
                         localStorage.clear();
-                        window.location.href = "http://127.0.0.1:5501/login.html";
+                        window.location.href = "https://pmo-c57.pages.dev/login";
                     } else {
-                        window.location.href = "http://127.0.0.1:5501/login.html";
+                        window.location.href = "https://pmo-c57.pages.dev/login";
                     }
                 }
             })
             .catch(error => {
                 console.error("Error checking user role:", error);
                 localStorage.clear();
-                window.location.href = "http://127.0.0.1:5501/login.html";
+                window.location.href = "https://pmo-c57.pages.dev/login";
             });
     }
 });

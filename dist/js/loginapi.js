@@ -20,18 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const role = response.data.role;
             console.log(role);
             if (role === 'user') {
-                window.location.href="user.html"
+                window.location.href="user"
             } else if (role === 'admin') {
-                window.location.href="admin.html"
+                window.location.href="admin"
             } else {
-                window.location.href = "http://127.0.0.1:5501/register.html";
+                window.location.href = "https://pmo-c57.pages.dev/register";
             }
         })
         .catch(error => {
             loader.style.display = 'none'; // Hide loader in case of error
             console.error('Error fetching role:', error);
             localStorage.clear(); // Clear localStorage if token is invalid
-            window.location.href = "http://127.0.0.1:5501/login.html";
+            window.location.href = "https://pmo-c57.pages.dev/login";
         });
     } else {
         // Add login button functionality for users who are not logged in
@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     loader.style.display = 'none'; // Hide loader after role check
 
                     if (role === 'user') {
-                        window.location.href = "http://127.0.0.1:5501/user.html";
+                        window.location.href = "https://pmo-c57.pages.dev/user";
                         console.log("User logged in, role:", role);
                     } else if (role === 'admin') {
-                        window.location.href = "http://127.0.0.1:5501/admin.html";
+                        window.location.href = "https://pmo-c57.pages.dev/admin";
                         console.log("Admin logged in, role:", role);
                     } else {
-                        window.location.href = "http://127.0.0.1:5501/register.html";
+                        window.location.href = "https://pmo-c57.pages.dev/register";
                     }
                 } else {
                     alert('Token əldə edilə bilmədi!');
