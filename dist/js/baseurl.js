@@ -1,0 +1,1 @@
+export const BASE_URL = "https://pmo-c57.pages.dev";

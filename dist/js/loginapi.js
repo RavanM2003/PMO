@@ -1,4 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
+import { BASE_URL } from './baseurl.js';
 document.addEventListener("DOMContentLoaded", () => {
     const storedUser = localStorage.getItem('user');
     
@@ -24,14 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (role === 'admin') {
                 window.location.href="admin"
             } else {
-                window.location.href = "https://pmo-c57.pages.dev/register";
+                window.location.href = `${BASE_URL}/register`;
             }
         })
         .catch(error => {
             loader.style.display = 'none'; // Hide loader in case of error
             console.error('Error fetching role:', error);
             localStorage.clear(); // Clear localStorage if token is invalid
-            window.location.href = "https://pmo-c57.pages.dev/login";
+            window.location.href = `${BASE_URL}/login`;
         });
     } else {
         // Add login button functionality for users who are not logged in
@@ -74,13 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     loader.style.display = 'none'; // Hide loader after role check
 
                     if (role === 'user') {
-                        window.location.href = "https://pmo-c57.pages.dev/user";
+                        window.location.href = `${BASE_URL}/user`;
                         console.log("User logged in, role:", role);
                     } else if (role === 'admin') {
-                        window.location.href = "https://pmo-c57.pages.dev/admin";
+                        window.location.href = `${BASE_URL}/admin`;
                         console.log("Admin logged in, role:", role);
                     } else {
-                        window.location.href = "https://pmo-c57.pages.dev/register";
+                        window.location.href = `${BASE_URL}/register`;
                     }
                 } else {
                     alert('Token əldə edilə bilmədi!');

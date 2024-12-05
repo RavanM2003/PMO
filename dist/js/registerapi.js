@@ -1,4 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
+import { BASE_URL } from './baseurl.js';
 window.addEventListener("load", async()=>{
     const storedAdmin = JSON.parse(localStorage.getItem('user'));
     if (!storedAdmin || !storedAdmin.token) {
@@ -16,9 +17,9 @@ window.addEventListener("load", async()=>{
     if (userRole === 'super_admin') {
         document.querySelector(".logina").style.display = "block"
     } else if (userRole === 'admin') {
-        window.history.back();
+        window.location.href=`${ BASE_URL }/admin`
     } else if (userRole === 'user') {
-        window.history.back();
+        window.location.href=`${ BASE_URL }/user`
         return; 
     } else {
         console.error('Unknown role:', userRole);

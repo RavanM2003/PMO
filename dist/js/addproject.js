@@ -1,4 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
+import { BASE_URL } from './baseurl.js';
 document.addEventListener('DOMContentLoaded', function () {
     const homelinks = document.querySelectorAll(".homelink");
 
@@ -14,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             if (user.user.user.role === "admin") {
-                window.location.href = "admin.html";
+                window.location.href = `${ BASE_URL }/admin`;
             } else if (user.user.user.role === "user") {
-                window.location.href = "user.html";
+                window.location.href = `${ BASE_URL }user`;
             } else {
                 alert("Invalid role detected!");
             }

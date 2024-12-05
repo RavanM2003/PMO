@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
             if (user.user.user.role === "admin") {
-                window.location.href = "admin.html";
+                window.location.href=`${ BASE_URL }/admin`
             } else if (user.user.user.role === "user") {
-                window.location.href = "user.html";
+                window.location.href=`${ BASE_URL }/user`
             } else {
                 alert("Invalid role detected!");
             }
@@ -121,7 +121,7 @@ const renderProjects = (projects) => {
 
         tr.addEventListener("click", () => {
             localStorage.setItem('projectData', JSON.stringify(project));
-            window.location = 'http://127.0.0.1:5501/projectdetail.html';
+            window.location = `${ BASE_URL }/projectdetail`;
         });
 
         let statusvalue;

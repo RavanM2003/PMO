@@ -1,5 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
-
+import { BASE_URL } from './baseurl.js';
 window.addEventListener("load", async () => {
     const homelinks = document.querySelectorAll(".homelink");
 
@@ -15,9 +15,9 @@ window.addEventListener("load", async () => {
                 return;
             }
             if (user.user.user.role === "admin") {
-                window.location.href = "admin.html";
+                window.location.href = `${ BASE_URL }/admin`;
             } else if (user.user.user.role === "user") {
-                window.location.href = "user.html";
+                window.location.href = `${ BASE_URL }/user.html`;
             } else {
                 alert("Invalid role detected!");
             }

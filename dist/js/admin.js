@@ -1,5 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
-
+import { BASE_URL } from './baseurl.js';
 window.addEventListener("load", async function () {
 
     const homelinks = document.querySelectorAll(".homelink");
@@ -17,9 +17,9 @@ window.addEventListener("load", async function () {
 
             // Check user role and redirect
             if (user.role === "admin") {
-                window.location.href = "admin.html";
+                window.location.href = `${ BASE_URL }/admin`;
             } else if (user.role === "user") {
-                window.location.href = "user.html";
+                window.location.href = `${ BASE_URL }user`;
             } else {
                 alert("Invalid role detected!");
             }
@@ -118,7 +118,7 @@ async function fetchProjects(page) {
 
             tr.addEventListener("click", () => {
                 localStorage.setItem('projectData', JSON.stringify(project));
-                window.location = 'http://127.0.0.1:5501/projectdetail.html';
+                window.location = `${ BASE_URL }/projectdetail`;
             });
         });
 

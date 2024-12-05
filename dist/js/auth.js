@@ -1,4 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
+import { BASE_URL } from './baseurl.js';
 document.addEventListener("DOMContentLoaded", () => {
     const homelinks = document.querySelectorAll(".homelink");
 
@@ -14,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
             if (user.user.user.role === "admin") {
-                window.location.href = "https://pmo-c57.pages.dev/admin";
+                window.location.href = `${ BASE_URL }/admin`;
             } else if (user.user.user.role === "user") {
-                window.location.href = "https://pmo-c57.pages.dev/user";
+                window.location.href = `${ BASE_URL }/user`;
             } else {
                 alert("Invalid role detected!");
             }
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!localStorage.getItem("user")) {
         localStorage.clear();
-        window.location.href = "https://pmo-c57.pages.dev/login";
+        window.location.href = `${ BASE_URL }/login`;
     } else {
         const user = localStorage.getItem('user');
         axios.defaults.headers.common['Authorization'] = `Bearer ${JSON.parse(user).token}`;
@@ -39,19 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     loader.style.display = "none";
                 } else {
                     if (role === "user") {
-                        window.location.href = "https://pmo-c57.pages.dev/user";
+                        window.location.href = `${ BASE_URL }/user`;
                     } else if (role === "super_admin") {
                         localStorage.clear();
-                        window.location.href = "https://pmo-c57.pages.dev/login";
+                        window.location.href = `${ BASE_URL }/login`;
                     } else {
-                        window.location.href = "https://pmo-c57.pages.dev/login";
+                        window.location.href = `${ BASE_URL }/login`;
                     }
                 }
             })
             .catch(error => {
                 console.error("Error checking user role:", error);
                 localStorage.clear();
-                window.location.href = "https://pmo-c57.pages.dev/login";
+                window.location.href = `${ BASE_URL }/login`;
             });
     }
 });

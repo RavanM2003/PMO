@@ -1,5 +1,5 @@
 import { API_BASE_URL } from './baseapi.js';
-
+import { BASE_URL } from './baseurl.js';
 document.addEventListener("DOMContentLoaded", () => {
 
     const homelinks = document.querySelectorAll(".homelink");
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
             if (user.user.user.role === "admin") {
-                window.location.href = "admin.html";
+                window.location.href = `${ BASE_URL }/admin`;
             } else if (user.user.user.role === "user") {
-                window.location.href = "user.html";
+                window.location.href = `${ BASE_URL }/user`;
             } else {
                 alert("Invalid role detected!");
             }
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         element.addEventListener("click", async (e) => {
             e.preventDefault();
             localStorage.clear();
-            window.location.href = "login.html";
+            window.location.href = `${ BASE_URL }/login`;
         });
     });
 
@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 fetchReportsEndpoint = `${API_BASE_URL}/api/projects/show/user/${user.user.user.id}/${project.id}`;
             }
 
-            // Fetch project reports
             axios.get(fetchReportsEndpoint)
                 .then((response) => {
                     const projectreports = document.querySelector(".projectreports");
